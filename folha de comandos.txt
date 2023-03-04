@@ -6,7 +6,7 @@ ng serve roda o servidor
 python -m venv venv
 #Django
 
-django-admin startproject blog . (cria pasta)
+django-admin startproject farm_project . (cria pasta)
 primeiro tem que ativar ovenv 
 .venv/Scripts 
 . activate
