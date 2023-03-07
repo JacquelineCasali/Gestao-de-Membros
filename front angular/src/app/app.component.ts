@@ -39,7 +39,7 @@ export class AppComponent {
         this.menbers = data;
       },
       (error) => {
-        console.log('Aconteceu um erro');
+        console.log('Aconteceu um erro', error.message);
       }
     );
   };

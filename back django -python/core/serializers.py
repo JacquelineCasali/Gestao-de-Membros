@@ -6,4 +6,8 @@ class MenberSerializer(serializers.ModelSerializer):
         model = Menber
         fields = ['id','name', 'surname','phone' ,'photo']
 
-
+class MenberSimpleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Menber
+        fields = ['id','name']
+        
