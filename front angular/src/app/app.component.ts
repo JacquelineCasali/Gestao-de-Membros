@@ -8,6 +8,8 @@ import { ApiService } from './api.service';
 })
 export class AppComponent {
   title = 'front angular';
+  // exibir
+  selected_menber;
   menbers = [
     {
       name: 'Member 01',
@@ -37,6 +39,18 @@ export class AppComponent {
       (data) => {
         // mombers nome da tabela no banco
         this.menbers = data;
+      },
+      (error) => {
+        console.log('Aconteceu um erro', error.message);
+      }
+    );
+  };
+  // adicionando o click
+  menberClicked = (Menber: any) => {
+    this.api.getMember(Menber.id).subscribe(
+      (data) => {
+        // mombers nome da tabela no banco
+        console.log(data);
       },
       (error) => {
         console.log('Aconteceu um erro', error.message);

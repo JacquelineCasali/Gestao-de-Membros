@@ -1,6 +1,10 @@
 <h1>Members</h1>
 <ul>
-  <li *ngFor="let menber of menbers">
-    {{ menber.id }} - {{ menber.name }} - {{ menber.surname }}
+  <li
+    style="cursor: pointer"
+    *ngFor="let menber of menbers"
+    (click)="menberClicked(menber)"
+  >
+    {{ menber.id }} - {{ menber.name }} {{ menber.surname }}
   </li>
 </ul>

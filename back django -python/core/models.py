@@ -11,7 +11,7 @@ class Menber(models.Model):
    
 # definir metodo para retornar a classe como vai retornar no banco 
     def __str__(self):
-        return self.name + ' ' + self.surname
+        return self.name + " " + self.surname
 
 
     
