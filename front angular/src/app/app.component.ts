@@ -10,19 +10,19 @@ export class AppComponent {
   title = 'front angular';
   menbers = [
     {
-      Name: 'Member 01',
+      name: 'Member 01',
       id: 1,
       surname: 'Ciclano',
       photo: 'http://www.minhaapp.com/photo1',
     },
     {
-      Name: 'Member 02',
+      name: 'Member 02',
       id: 2,
       surname: 'Beltrano',
       photo: 'http://www.minhaapp.com/photo2',
     },
     {
-      Name: 'Member 03',
+      name: 'Member 03',
       id: 3,
       surname: 'Fulano',
       photo: 'http://www.minhaapp.com/photo3',
