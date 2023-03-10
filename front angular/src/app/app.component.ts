@@ -8,8 +8,8 @@ import { ApiService } from './api.service';
 })
 export class AppComponent {
   title = 'front angular';
-  // exibir
-  selected_menber;
+  // // exibir na mesma tale
+  selected_menber = { id: 0, name: '', surname: '' };
   menbers = [
     {
       name: 'Member 01',
@@ -51,6 +51,7 @@ export class AppComponent {
       (data) => {
         // mombers nome da tabela no banco
         console.log(data);
+        this.selected_menber = data;
       },
       (error) => {
         console.log('Aconteceu um erro', error.message);

@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MembersDetailComponent } from './members-detail/members-detail.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MembersDetailComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
