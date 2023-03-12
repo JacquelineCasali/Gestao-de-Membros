@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from './api.service';
-
+import{Router} from '@angular/router'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,7 +30,7 @@ export class AppComponent {
       photo: 'http://www.minhaapp.com/photo3',
     },
   ];
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService, private router: Router) {
     this.getMembers();
   }
   // buscar dados da api
@@ -46,16 +46,7 @@ export class AppComponent {
     );
   };
   // adicionando o click
-  menberClicked = (Menber: any) => {
-    this.api.getMember(Menber.id).subscribe(
-      (data) => {
-        // mombers nome da tabela no banco
-        console.log(data);
-        this.selected_menber = data;
-      },
-      (error) => {
-        console.log('Aconteceu um erro', error.message);
-      }
-    );
+  menberClicked = (menber:any) => {
+  this.router.navigate(['member-detail',menber.id])
   };
 }
