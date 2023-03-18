@@ -8,7 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   baseUrl = 'http://localhost:8000/';
-  httpHeaders = new HttpHeaders({ 'Content-Type': 'applications/json' });
+  httpHeaders = new HttpHeaders({
+    // 'Content-Type': 'applications/json'
+    'X-CSRFToken': 'csrftoken',
+  });
   //  interação com a api
   constructor(private http: HttpClient) {}
   getAllMembers(): Observable<any> {
@@ -18,6 +21,12 @@ export class ApiService {
   }
   getMember(id: any): Observable<any> {
     return this.http.get(this.baseUrl + 'menbers/' + id + '/', {
+      headers: this.httpHeaders,
+    });
+  }
+  // metodo POST criar
+  saveNewMember(member: any): Observable<any> {
+    return this.http.post(this.baseUrl + 'menbers/', member, {
       headers: this.httpHeaders,
     });
   }
