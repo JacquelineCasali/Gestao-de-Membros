@@ -7,7 +7,7 @@ class Menber(models.Model):
     phone = models.CharField(max_length=100)
     email = models.EmailField()
     andress = models.CharField(max_length=200)
-    photo = models.ImageField(upload_to='members_profile')
+    photo = models.ImageField(upload_to='members_profile',blank=True,null=True)
    
 # definir metodo para retornar a classe como vai retornar no banco 
     def __str__(self):

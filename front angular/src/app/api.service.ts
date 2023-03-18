@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
   baseUrl = 'http://localhost:8000/';
   httpHeaders = new HttpHeaders({ 'Content-Type': 'applications/json' });
-//  interação com a api
+  //  interação com a api
   constructor(private http: HttpClient) {}
   getAllMembers(): Observable<any> {
     return this.http.get(this.baseUrl + 'menbers/', {
