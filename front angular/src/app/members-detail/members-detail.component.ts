@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { AppComponent } from '../app.component';
 import { ApiService } from './api.service';
 
 @Component({
@@ -11,7 +12,8 @@ export class MembersDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private api: ApiService,
-    private router: Router
+    private router: Router,
+    private appComponente: AppComponent
   ) {}
   selected_menber = { id: '', name: '', surname: '', phone: '' };
   selected_id: any;
@@ -28,7 +30,7 @@ export class MembersDetailComponent implements OnInit {
     this.api.getMember(id).subscribe(
       (data) => {
         // mombers nome da tabela no banco
-        console.log(data);
+        // console.log(data);
         this.selected_menber = data;
       },
       (error) => {
@@ -53,5 +55,21 @@ export class MembersDetailComponent implements OnInit {
 
   newMember() {
     this.router.navigate(['new-member']);
+  }
+  // deletar membro
+  delete() {
+    this.api.deleteMember(this.selected_id).subscribe(
+      (data) => {
+        //  deletando menbro
+        let index;
+        this.appComponente.menbers.forEach((e, i) => {
+          if (e.id == this.selected_id) index = i;
+        });
+        this.appComponente.menbers.splice(1);
+      },
+      (error) => {
+        console.log('Aconteceu um erro', error.message);
+      }
+    );
   }
 }

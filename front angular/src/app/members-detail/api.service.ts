@@ -31,4 +31,10 @@ export class ApiService {
       headers: this.httpHeaders,
     });
   }
+  // deletar membro
+  deleteMember(id: any): Observable<any> {
+    return this.http.delete(this.baseUrl + 'menbers/' + id + '/', {
+      headers: this.httpHeaders,
+    });
+  }
 }
