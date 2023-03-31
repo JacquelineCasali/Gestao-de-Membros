@@ -15,7 +15,7 @@ export class MembersDetailComponent implements OnInit {
     private router: Router,
     private appComponente: AppComponent
   ) {}
-  selected_menber = { id: '', name: '', surname: '', phone: '' };
+  selected_menber = { id: '', name: '', surname: '', phone: '', photo: '' };
   selected_id: any;
 
   ngOnInit() {

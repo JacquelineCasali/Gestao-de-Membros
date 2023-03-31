@@ -1,20 +1,23 @@
-<h1>Members</h1>
-<ul>
-  <li
-    style="cursor: pointer"
-    *ngFor="let menber of menbers"
-    (click)="menberClicked(menber)"
-  >
-    {{ menber.id }} - {{ menber.name }} {{ menber.surname }}
-  </li>
-</ul>
-<router-outlet></router-outlet>
+<h1>Membros</h1>
+<table class="alt">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      style="cursor: pointer"
+      *ngFor="let menber of menbers"
+      (click)="menberClicked(menber)"
+    >
+      <td>{{ menber.id }}</td>
+      <td>{{ menber.name }} {{ menber.surname }}</td>
+      <td>{{ menber.phone }}</td>
+    </tr>
+  </tbody>
+</table>
 
-<!-- para quando clicar aparecer na mesma pagina  -->
-<!-- <p>{{ selected_menber.id }}</p>
-<br />
-<p>{{ selected_menber.name }}</p>
-<br />
-<p>{{ selected_menber.surname }}</p>
-<br /> -->
-<!-- abrir as rotas do angula com os diferentes componentes  -->
+<router-outlet></router-outlet>

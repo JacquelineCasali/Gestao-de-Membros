@@ -9,5 +9,5 @@ class MenberSerializer(serializers.ModelSerializer):
 class MenberSimpleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Menber
-        fields = ['id','name']
+        fields = ['id','name','phone','photo']
         
