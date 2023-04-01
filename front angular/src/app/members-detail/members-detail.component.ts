@@ -44,7 +44,7 @@ export class MembersDetailComponent implements OnInit {
       (data) => {
         // mombers nome da tabela no banco
 
-        console.log(data);
+        //console.log(data);
         this.selected_menber = data;
       },
       (error) => {

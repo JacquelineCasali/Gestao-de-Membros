@@ -3,7 +3,7 @@ Projeto de angular com django
 # Projeto leitor QR code
 
 clone o repositório completo :
-git clone https://github.com/JacquelineCasali/leitor-de-QR-Code
+git clone https://github.com/JacquelineCasali/Gestao-de-Membros
 
 # Linguagem Utilizada
 

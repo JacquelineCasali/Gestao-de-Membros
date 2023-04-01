@@ -29,7 +29,7 @@ export class ApiService {
       name: menber.name,
       surname: menber.surname,
       phone: menber.phone,
-      photo: menber.photo,
+      // photo: menber.photo,
     };
 
     return this.http.put(this.baseUrl + 'menbers/' + menber.id + '/', body, {

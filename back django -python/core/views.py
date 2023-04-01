@@ -11,6 +11,8 @@ class MenberViewSet(viewsets.ModelViewSet):
     serializer_class = MenberSerializer
     authentication_classes=[TokenAuthentication, SessionAuthentication]
     permission_classes=[IsAuthenticated,]
+
+    
 #  definir o metodo listen (listagem )
 
 # padrão do django
